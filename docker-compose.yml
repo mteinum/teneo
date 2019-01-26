@@ -1,0 +1,15 @@
+version: '3'
+services:
+  rabbitmq:
+    image: mteinum/rabbitmq:latest
+    ports:
+      - "15672:15672"
+    deploy:
+      replicas: 1
+
+  prometheus:
+    image: mteinum/prometheus:latest
+    ports:
+      - "9090:9090"
+    deploy:
+      replicas: 1
